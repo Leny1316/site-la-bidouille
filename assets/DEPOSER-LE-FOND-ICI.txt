@@ -1,0 +1,5 @@
+Dépose ici ton fond d'écran existant et nomme-le : fond-atelier.jpg
+
+Chemin attendu par défaut : assets/fond-atelier.jpg
+
+Tu peux aussi remplacer wallpaperUrl au début du fichier app.js par une URL complète.
