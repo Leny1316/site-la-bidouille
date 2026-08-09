@@ -1,0 +1,6 @@
+LA BIDOUILLE OS — JEUX
+
+Ce dossier contient les mini-jeux HTML autorisés de La Bidouille OS.
+
+Ping 95 est une création originale du projet, jouable au clavier ou avec les
+commandes tactiles.

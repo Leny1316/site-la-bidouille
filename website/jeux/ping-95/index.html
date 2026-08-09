@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Ping 95, mini-jeu original de La Bidouille OS.">
+  <title>Ping 95 — La Bidouille OS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="ping-shell">
+    <header class="ping-header">
+      <h1>PING 95</h1>
+      <p>Premier à 7 points</p>
+    </header>
+
+    <section class="ping-screen" aria-label="Terrain de jeu">
+      <canvas id="ping-canvas" width="800" height="450" tabindex="0" aria-label="Jeu de raquettes. Utilise les flèches haut et bas, ou Z et S."></canvas>
+      <div class="ping-overlay" id="ping-overlay">
+        <strong id="ping-message">Prêt pour la bidouille ?</strong>
+        <button type="button" id="ping-start">Démarrer</button>
+      </div>
+      <div class="ping-scanlines" aria-hidden="true"></div>
+    </section>
+
+    <p class="ping-status" id="ping-status" role="status" aria-live="polite">Joueur 0 — Ordinateur 0</p>
+
+    <div class="ping-controls" aria-label="Commandes tactiles">
+      <button type="button" id="ping-up" aria-label="Monter">▲ Monter</button>
+      <button type="button" id="ping-pause">Pause</button>
+      <button type="button" id="ping-down" aria-label="Descendre">▼ Descendre</button>
+    </div>
+
+    <p class="ping-help"><strong>Clavier :</strong> ↑/↓ ou Z/S · <strong>Pause :</strong> Espace</p>
+  </main>
+
+  <script src="jeu.js"></script>
+</body>
+</html>
