@@ -248,7 +248,7 @@
       height: 520,
       desktop: true,
       address: "La Bidouille OS \\ À propos",
-      status: "Version 2.0",
+      status: "Version 3.1 — Édition rétro",
       view: "about"
     },
     {
@@ -308,6 +308,15 @@
       view: "game-player"
     }
   ];
+
+  const lbDesktopOverrides = lbContent.site?.desktopIcons || {};
+  lbApps.forEach((app) => {
+    const override = lbDesktopOverrides[app.id];
+    if (!override || typeof override !== "object") return;
+    if (typeof override.title === "string" && override.title.trim()) app.title = override.title.trim().slice(0, 60);
+    if (typeof override.visible === "boolean") app.desktop = override.visible;
+    if (typeof override.iconUrl === "string" && override.iconUrl.trim()) app.iconUrl = override.iconUrl.trim();
+  });
 
   const lbAppMap = new Map(lbApps.map((app) => [app.id, app]));
 
@@ -938,7 +947,7 @@
           </label>
           <label class="lb-check-row">
             <input type="checkbox" data-lb-setting="muted" ${lbState.settings.muted ? "checked" : ""}>
-            <span><strong>Couper les sons</strong><br>Prépare le réglage pour les futurs sons de démarrage et d'interface.</span>
+            <span><strong>Couper les sons</strong><br>Désactive les clics, confirmations et sons d'ouverture générés par La Bidouille OS.</span>
           </label>
         </div>
         <div class="lb-info-panel">

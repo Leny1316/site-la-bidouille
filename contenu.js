@@ -1,5 +1,5 @@
 window.LB_CONTENT = {
-  "version": "2.0",
+  "version": "3.1",
   "site": {
     "wallpaper": "assets/fond-atelier.jpg",
     "contactEmail": "labidouille@atomicmail.io",

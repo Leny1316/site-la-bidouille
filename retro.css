@@ -1,0 +1,350 @@
+/* Couche visuelle originale de La Bidouille OS.
+   L'esthétique reprend les contraintes graphiques des interfaces 90s sans
+   utiliser de logo, de police ou de ressource appartenant à un autre OS. */
+
+:root {
+  --lb-electric-blue: #1648a8;
+  --lb-electric-cyan: #1bc7c1;
+  --lb-phosphor: #8fffd5;
+}
+
+body.lb-booting {
+  cursor: wait;
+}
+
+body.lb-booting #lb-os {
+  filter: brightness(.2) saturate(.4);
+}
+
+.lb-boot {
+  position: fixed;
+  z-index: 100000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  color: #fff;
+  background:
+    linear-gradient(135deg, transparent 0 48%, rgba(59, 201, 196, .11) 48% 52%, transparent 52%) 0 0 / 34px 34px,
+    radial-gradient(circle at 72% 32%, #17477a 0, #092653 33%, #020b1f 72%);
+  font-family: "Courier New", Consolas, monospace;
+  image-rendering: pixelated;
+  transition: opacity 260ms steps(5, end), filter 260ms steps(5, end);
+}
+
+.lb-boot[hidden] {
+  display: none !important;
+}
+
+.lb-boot.lb-boot-done {
+  opacity: 0;
+  filter: brightness(1.65);
+  pointer-events: none;
+}
+
+.lb-boot::before,
+.lb-boot::after,
+.lb-boot-noise {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.lb-boot::before {
+  background: repeating-linear-gradient(to bottom, transparent 0 3px, rgba(0, 0, 0, .16) 3px 4px);
+}
+
+.lb-boot::after {
+  box-shadow: inset 0 0 18vmin rgba(0, 0, 0, .9);
+}
+
+.lb-boot-noise {
+  opacity: .1;
+  background-image: radial-gradient(rgba(255,255,255,.9) .45px, transparent .7px);
+  background-size: 5px 5px;
+  animation: lb-boot-noise 210ms steps(2, end) infinite;
+}
+
+.lb-boot-panel {
+  position: relative;
+  z-index: 1;
+  width: min(660px, calc(100% - 32px));
+  padding: 28px 34px 24px 132px;
+  border: 2px solid #65eee4;
+  outline: 1px solid #071124;
+  background: rgba(2, 12, 34, .78);
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, .35), inset 0 0 0 3px rgba(255,255,255,.06);
+}
+
+.lb-boot-emblem {
+  position: absolute;
+  top: 33px;
+  left: 34px;
+  width: 65px;
+  height: 65px;
+  border: 3px solid #d9ffff;
+  background: #087f7f;
+  box-shadow: 7px 7px 0 #071124, inset 4px 4px 0 rgba(255,255,255,.24);
+  transform: rotate(-7deg);
+}
+
+.lb-boot-emblem span {
+  position: absolute;
+  display: block;
+  background: #fff36b;
+  box-shadow: 2px 2px 0 #071124;
+}
+
+.lb-boot-emblem span:nth-child(1) { top: 11px; left: 16px; width: 13px; height: 13px; }
+.lb-boot-emblem span:nth-child(2) { top: 11px; right: 11px; width: 13px; height: 13px; }
+.lb-boot-emblem span:nth-child(3) { top: 24px; left: 25px; width: 14px; height: 21px; }
+.lb-boot-emblem span:nth-child(4) { bottom: 8px; left: 18px; width: 13px; height: 10px; }
+.lb-boot-emblem span:nth-child(5) { right: 12px; bottom: 8px; width: 13px; height: 10px; }
+
+.lb-boot-kicker {
+  margin: 0 0 5px;
+  color: #8fffd5;
+  font-size: 11px;
+  letter-spacing: .16em;
+}
+
+.lb-boot h1 {
+  margin: 0;
+  font: italic 900 clamp(37px, 7vw, 68px)/.92 Arial Black, Impact, sans-serif;
+  letter-spacing: -.07em;
+  text-shadow: 3px 3px 0 #087f7f, 6px 6px 0 #020816;
+  transform: skewX(-7deg);
+}
+
+.lb-boot h1 span {
+  color: #fff36b;
+  font-size: .56em;
+  letter-spacing: -.03em;
+}
+
+.lb-boot-edition {
+  margin: 7px 0 14px;
+  color: #b8d9ff;
+  font-size: 13px;
+  letter-spacing: .13em;
+}
+
+.lb-boot-rule {
+  height: 3px;
+  margin: 0 0 13px;
+  background: linear-gradient(90deg, #fff36b 0 18%, #18c2bd 18% 64%, transparent 64%);
+}
+
+.lb-boot-status {
+  min-height: 17px;
+  margin: 0 0 9px;
+  color: #dbeaff;
+  font-size: 12px;
+}
+
+.lb-boot-status::after {
+  content: "_";
+  animation: lb-cursor-blink 600ms steps(1, end) infinite;
+}
+
+.lb-boot-progress {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 3px;
+  height: 18px;
+  padding: 3px;
+  border: 2px solid #d8ffff;
+  background: #010716;
+  box-shadow: inset 2px 2px 0 #000;
+}
+
+.lb-boot-progress span {
+  background: #11274a;
+}
+
+.lb-boot-progress span.lb-is-loaded {
+  background: linear-gradient(90deg, #087f7f, #72f3c8);
+  box-shadow: inset 1px 1px 0 rgba(255,255,255,.35);
+}
+
+.lb-boot-skip {
+  margin: 15px 0 0;
+  padding: 5px 9px;
+  border: 1px solid #9bb7d9;
+  color: #dbeaff;
+  background: #0b2850;
+  font: 11px "Courier New", monospace;
+  cursor: pointer;
+}
+
+.lb-boot-skip:hover,
+.lb-boot-skip:focus-visible {
+  color: #071124;
+  background: #fff36b;
+  outline: 1px dotted #071124;
+  outline-offset: -3px;
+}
+
+.lb-boot-copyright {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 14px;
+  left: 18px;
+  margin: 0;
+  color: #7595b8;
+  font-size: 10px;
+  text-align: center;
+}
+
+body.lb-boot-complete #lb-desktop {
+  animation: lb-desktop-power-on 420ms steps(6, end) both;
+}
+
+/* Signature originale du bouton Démarrer : un petit éclair de bidouilleur. */
+.lb-start-logo {
+  position: relative;
+  display: block;
+  width: 19px;
+  height: 19px;
+  filter: drop-shadow(1px 1px 0 #000);
+  transform: none;
+}
+
+.lb-start-logo span:first-child {
+  position: absolute;
+  top: 1px;
+  left: 7px;
+  width: 8px;
+  height: 16px;
+  background: #fff36b;
+  clip-path: polygon(42% 0, 100% 0, 65% 39%, 100% 39%, 22% 100%, 43% 55%, 4% 55%);
+}
+
+.lb-start-logo span:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 5px;
+  height: 5px;
+  background: #1bc7c1;
+}
+
+.lb-window-titlebar {
+  background-image: linear-gradient(90deg, #00006b 0, #1239a2 56%, #087f7f 100%);
+  background-size: 180% 100%;
+}
+
+.lb-window.lb-is-active .lb-window-titlebar,
+.lb-dialog-window .lb-window-titlebar {
+  animation: lb-title-signal 8s linear infinite;
+}
+
+.lb-window.lb-retro-spawn {
+  animation: lb-window-signal-in 190ms steps(4, end) both;
+}
+
+.lb-icon.lb-retro-icon-in {
+  opacity: 0;
+  animation: lb-icon-resolve 240ms steps(4, end) forwards;
+  animation-delay: calc(var(--lb-icon-order, 0) * 22ms);
+}
+
+.lb-start-item:hover .lb-menu-icon,
+.lb-start-item:focus-visible .lb-menu-icon,
+.lb-classic-button:hover,
+.lb-task-button:hover {
+  filter: saturate(1.18);
+}
+
+.lb-statusbar {
+  background-image: linear-gradient(90deg, rgba(27,199,193,.08), transparent 42%);
+}
+
+/* Scanlines discrètes et un léger balayage vertical de tube. */
+.lb-crt::after {
+  background:
+    linear-gradient(to bottom, transparent 0 46%, rgba(130,255,225,.035) 49%, transparent 52%) 0 -100vh / 100% 200vh no-repeat,
+    radial-gradient(ellipse at center, transparent 65%, rgba(0, 0, 0, .16) 100%);
+  animation: lb-crt-sweep 9s linear infinite, lb-crt-flicker-soft 7s steps(2, end) infinite;
+}
+
+#lb-os.lb-crt-pixels .lb-crt::before { opacity: .52; }
+#lb-os.lb-crt-soft .lb-crt::before { opacity: .34; }
+
+@keyframes lb-boot-noise {
+  from { transform: translate(0, 0); }
+  to { transform: translate(3px, -2px); }
+}
+
+@keyframes lb-cursor-blink {
+  0%, 48% { opacity: 1; }
+  49%, 100% { opacity: 0; }
+}
+
+@keyframes lb-desktop-power-on {
+  0% { filter: brightness(4) contrast(.2); transform: scaleY(.02); }
+  42% { filter: brightness(1.55) contrast(.72); transform: scaleY(1); }
+  100% { filter: none; transform: none; }
+}
+
+@keyframes lb-title-signal {
+  from { background-position: 100% 0; }
+  to { background-position: -100% 0; }
+}
+
+@keyframes lb-window-signal-in {
+  0% { opacity: 0; filter: brightness(1.8); transform: translateY(7px) scale(.985); }
+  100% { opacity: 1; filter: none; transform: none; }
+}
+
+@keyframes lb-icon-resolve {
+  0% { opacity: 0; filter: brightness(2); transform: translateY(5px); }
+  100% { opacity: 1; filter: none; transform: none; }
+}
+
+@keyframes lb-crt-sweep {
+  from { background-position: 0 -100vh, 0 0; }
+  to { background-position: 0 100vh, 0 0; }
+}
+
+@media (max-width: 600px) {
+  .lb-boot-panel {
+    padding: 100px 20px 22px;
+  }
+
+  .lb-boot-emblem {
+    top: 21px;
+    left: 24px;
+  }
+
+  .lb-boot h1 {
+    font-size: clamp(35px, 13vw, 54px);
+  }
+
+  .lb-boot-kicker { font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-boot-noise,
+  .lb-boot-status::after,
+  .lb-window-titlebar,
+  .lb-crt::after {
+    animation: none !important;
+  }
+
+  .lb-boot,
+  .lb-icon.lb-retro-icon-in,
+  body.lb-boot-complete #lb-desktop {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+  }
+}
+
+#lb-os.lb-reduced-motion .lb-window-titlebar,
+#lb-os.lb-reduced-motion .lb-crt::after,
+#lb-os.lb-reduced-motion .lb-icon.lb-retro-icon-in {
+  animation: none !important;
+  opacity: 1;
+}

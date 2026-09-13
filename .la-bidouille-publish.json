@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "files": [
+    ".nojekyll",
+    "app.js",
+    "assets/Capture d'écran 2026-08-09 201249.png",
+    "assets/Capture d'écran 2026-08-09 201849.png",
+    "assets/DEPOSER-LE-FOND-ICI.txt",
+    "assets/fond-atelier.jpg",
+    "assets/logo-la-bidouille.png",
+    "contenu.js",
+    "index.html",
+    "jeux/LISEZ-MOI.txt",
+    "jeux/ping-95/index.html",
+    "jeux/ping-95/jeu.js",
+    "jeux/ping-95/style.css",
+    "retro.css",
+    "retro.js",
+    "styles.css",
+    "telechargements/LISEZ-MOI.txt"
+  ]
+}
