@@ -7,7 +7,8 @@ window.LB_CONTENT = {
     "profileImage": "assets/logo-la-bidouille.png",
     "logo": "assets/logo-la-bidouille.png",
     "bio": "Moi, c'est Leny. La rétro-informatique, les anciennes consoles, les réparations, les mods et toutes les bidouilles qui redonnent vie au matériel d'autrefois sont une vraie passion pour moi.",
-    "about": "La Bidouille est mon atelier numérique : j'y partage mes vidéos, mes restaurations, mes découvertes, mes fichiers utiles et mes projets autour du rétro."
+    "about": "La Bidouille est mon atelier numérique : j'y partage mes vidéos, mes restaurations, mes découvertes, mes fichiers utiles et mes projets autour du rétro.",
+    "desktopIcons": {}
   },
   "videos": {
     "tutoriels": [],
@@ -23,6 +24,24 @@ window.LB_CONTENT = {
       "image": "https://www.retrobat.org/wp-content/uploads/2026/03/image-768x431.webp",
       "version": "V8.2",
       "size": "8go"
+    },
+    {
+      "title": "windows virtualbox de 1.01 a 3.11 workstation ",
+      "category": "Divers",
+      "description": "pour les lancer sis il ne se lance pas automatiquement taper juste \"win\"",
+      "fileUrl": "https://mega.nz/file/nsQGlDRK#72RdgcAXold3-Vr-hI1Jj54KYQLXIbEVuB4qAPnXevM",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAACUCAMAAAA3b0xFAAAAOVBMVEWWxOv///+PwOqlzO7a6feRwuqqz+7D3fPI3/Tv9fyfye35+/7i7vnx9/yv0e+LvunR5fW21fG92fJwcFihAAACXUlEQVR4nO3dwW6rMBCF4cHY4QK2Ibz/wxaUlND2LiJlJsOJzr+ourLzyUVKq8YjzaGx5K4O8nIp3heM4fXFnmmoXS7jkSKPb0usaVJ5IW93iYQp1bn8zzVfQlLaxMG17Rou819Xm7RUXq5139T+cmXVF+DlWgv56Iq6izu6ROLDlUXvZ3DL05Uk7y5dlfN5Sfp2teoru7qkvblm7ePydqV5c5X241xtWV2z/t7OLglzI2NVPy53V6qjFIOtvV2SesmTwbLerilK94nnFTqpBsu6u1aVwq+Rf/J3WajO4LKJLqzowoourOjCii6s6MKKLqzowoourOjCii6s6MKKLqzowoourOjCii6swglcyaITuHqLRn9XYxlddNFFF13urn8W9f6uYNB0gvcbFp3hfZRFdGFFF1Z0YUUXVnRhRRdWdGH1+S6DDzk6trtye3HK1uUXXXTRRRdd73D1S+eUrStOFn8mfyZrl8n6XtGFFV1Y0YUVXVjRhRVdWNGFFV1Y0YUVXVjRhRVdWNGFFV1Y0YUVXVjRhRVdWJ3BZXuvvpdrMJ6D4OWqxnMrnFyhM54z4uSashSDZd1dq2q8Ws4n8nGF6yhNtJxP5ONa95emXAznZLm40mWbk6U9NFDcXdvowO3eg6r9hPm6Qm3ucwOVxyH6utKNtH3pB6s5j+93paHfXU3WhTm60nAbOHq/V6QXzWfMzxXkfvXHfl/KVfEh83IluX5zHvfAxJq0zszHFVJ9/N/+4X6bMS4yqcxgfr8rhUmWeJiY/fPenpLnpbavt3+ubVBY7InqMufyQ/IFcVstFNzoid0AAAAASUVORK5CYII=",
+      "version": "1.0",
+      "size": "60/mo"
+    },
+    {
+      "title": "virtualbox",
+      "category": "Divers",
+      "description": "systeme de virtualisation",
+      "fileUrl": "https://www.virtualbox.org/wiki/Downloads",
+      "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB3klEQVR4AWJwL/ABtF+GsA1CQRh+XkE3n3qFV3hVr/CKZKVppnDLeE1e6XyYN5s39Qqv8Ip0LJnsenlJc/x5cDBKaiZ+0fR69929+x/lrro/gNpklUqy8yBtdCklPB28+Cv3z706+Mcf4y0tQJLt5eJMqfH6ACi5CGBVfxsvUGqtw1EAm9e4qzh1BUXESSgVG08lum4X0kcugCi6u3+IeIFT7ldUhIs651Owi4BFti9LnhgA626ARcEBGvMYSkdkC6x13Dfmy+d3/j0dmxPg0jFLzkAFAOoYj6A9gSwCwBQTN29eCOP/HApAQjvWbNvtniAg2i9f7GHJ4PxhBxAA7Yhjxj1BOza5XwKAIABw2HEPe5DC9xHabwqAy44VA3ABFmC/aQCyHed/GEl2nB9AsOP8AJIdURbaLNVWh38WJhTs6IjXJYsfL0wo2RG7h9jpAHjroR3xir4xgGxHjMNp0YXVJ2pIABhux3aMc1IydEfiQLKjetqt8GacCoCBdZ8dVbIr2hPYrW4IINsRzxIBpwPgiOmH2ywi0U70/4ExwTUWNGgJ8ekoiYBgOh9D3zOgME5h4DvDcxY490dWhEXHQ4D96H4XCxPg2k6tszA+JWkJXSLLyrGgNL0u7P/b8S8zygji//c4vAAAAABJRU5ErkJggg==",
+      "version": "",
+      "size": ""
     }
   ],
   "gallery": [
