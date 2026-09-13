@@ -7,9 +7,30 @@
   <meta name="description" content="La Bidouille OS : rétro-informatique, réparations, consoles, émulation et projets DIY dans une interface inspirée des années 90.">
   <title>LA BIDOUILLE OS</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="retro.css">
 </head>
-<body class="lb-standalone">
-  <div id="lb-os" aria-label="Bureau de La Bidouille OS">
+<body class="lb-standalone lb-booting">
+  <section id="lb-boot" class="lb-boot" aria-label="Démarrage de La Bidouille OS" aria-live="polite">
+    <div class="lb-boot-noise" aria-hidden="true"></div>
+    <div class="lb-boot-panel">
+      <div class="lb-boot-emblem" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <p class="lb-boot-kicker">ATELIER NUMÉRIQUE · SYSTÈME ARTISANAL</p>
+      <h1><span>LA</span> BIDOUILLE</h1>
+      <p class="lb-boot-edition">OS — Édition rétro 95</p>
+      <div class="lb-boot-rule" aria-hidden="true"></div>
+      <p id="lb-boot-status" class="lb-boot-status">Contrôle des composants...</p>
+      <div class="lb-boot-progress" role="progressbar" aria-label="Progression du démarrage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <button id="lb-boot-skip" class="lb-boot-skip" type="button">Passer le démarrage</button>
+    </div>
+    <p class="lb-boot-copyright">La Bidouille OS · Une création originale de l’atelier de Leny</p>
+  </section>
+
+  <div id="lb-os" aria-label="Bureau de La Bidouille OS" aria-hidden="true">
     <div id="lb-desktop">
       <div id="lb-desktop-icons" aria-label="Raccourcis du bureau"></div>
 
@@ -28,9 +49,7 @@
           aria-expanded="false"
           aria-controls="lb-start-menu"
         >
-          <span class="lb-start-logo" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-          </span>
+          <span class="lb-start-logo" aria-hidden="true"><span></span><span></span></span>
           <span>Démarrer</span>
         </button>
 
@@ -62,5 +81,6 @@
 
   <script src="contenu.js"></script>
   <script src="app.js"></script>
+  <script src="retro.js"></script>
 </body>
 </html>

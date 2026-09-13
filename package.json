@@ -1,0 +1,52 @@
+{
+  "name": "la-bidouille-gestionnaire",
+  "version": "3.1.0",
+  "description": "Gestionnaire Windows et publication GitHub Pages de La Bidouille OS",
+  "author": "Leny — La Bidouille",
+  "private": true,
+  "main": "manager/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test manager/tests/*.test.js",
+    "dist:win": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "44.3.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "fr.labidouille.gestionnaire",
+    "productName": "Gestionnaire La Bidouille",
+    "asar": true,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "manager/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "website",
+        "to": "site"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/logo-la-bidouille.png",
+      "artifactName": "La-Bidouille-Gestionnaire-${version}-Windows-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Gestionnaire La Bidouille"
+    }
+  }
+}

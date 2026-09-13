@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.la-bidouille-backups/
+*.log
+.DS_Store
+Thumbs.db

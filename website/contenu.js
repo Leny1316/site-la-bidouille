@@ -1,8 +1,8 @@
 window.LB_CONTENT = {
-  "version": "2.0",
+  "version": "3.1",
   "site": {
     "wallpaper": "assets/fond-atelier.jpg",
-    "contactEmail": "",
+    "contactEmail": "labidouille@atomicmail.io",
     "authorName": "Leny",
     "profileImage": "assets/logo-la-bidouille.png",
     "logo": "assets/logo-la-bidouille.png",
@@ -16,13 +16,13 @@ window.LB_CONTENT = {
   },
   "downloads": [
     {
-      "title": "Exemple de téléchargement",
-      "category": "Tutoriels",
-      "description": "Ce petit fichier de démonstration permet de vérifier le fonctionnement du téléchargement.",
-      "fileUrl": "telechargements/LISEZ-MOI.txt",
-      "image": "",
-      "version": "1.0",
-      "size": "Très léger"
+      "title": "retrobat",
+      "category": "Émulation",
+      "description": "émulateur retrobat Windows mac et linux que j'utilise personnellement et qui et très bien",
+      "fileUrl": "https://github.com/RetroBat-Official/retrobat/releases",
+      "image": "https://www.retrobat.org/wp-content/uploads/2026/03/image-768x431.webp",
+      "version": "V8.2",
+      "size": "8go"
     }
   ],
   "gallery": [
@@ -38,15 +38,15 @@ window.LB_CONTENT = {
       "title": "Ping 95",
       "description": "Un jeu de raquettes original créé pour La Bidouille OS. Joue au clavier ou avec les commandes tactiles et marque 7 points avant l'ordinateur.",
       "url": "jeux/ping-95/index.html",
-      "image": "",
+      "image": "assets/Capture d'écran 2026-08-09 201249.png",
       "mode": "embed",
       "ready": true
     },
     {
       "title": "PAC-MAN — Google Doodle officiel",
       "description": "La version jouable officielle créée par Google avec l'autorisation de Bandai Namco pour les 30 ans de PAC-MAN. Elle s'ouvre sur le site officiel de Google Doodles.",
-      "url": "https://doodles.google/doodle/30th-anniversary-of-pac-man/",
-      "image": "",
+      "url": "https://www.google.com/logos/2010/pacman10-i.html",
+      "image": "assets/Capture d'écran 2026-08-09 201849.png",
       "mode": "external",
       "ready": true
     }
@@ -365,7 +365,7 @@ window.LB_CONTENT = {
       "region": "Monde",
       "generation": "Sixième génération — 128 bits commerciaux",
       "type": "Salon",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sega-Dreamcast-Console-Set.jpg?width=640",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Dreamcast-Console-Set.png/250px-Dreamcast-Console-Set.png?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "imageSource": "https://commons.wikimedia.org/wiki/File:Sega-Dreamcast-Console-Set.jpg",
       "summary": "La dernière console de Sega, équipée d'un modem selon les régions et pensée très tôt pour le jeu en ligne.",
       "cpu": "Hitachi SH-4, 200 MHz",
@@ -419,7 +419,7 @@ window.LB_CONTENT = {
       "region": "Monde",
       "generation": "Sixième génération",
       "type": "Salon",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Xbox-Console-Set.jpg?width=640",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Xbox-Console-Set.png/250px-Xbox-Console-Set.png?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "imageSource": "https://commons.wikimedia.org/wiki/File:Xbox-Console-Set.jpg",
       "summary": "La première Xbox se distingue par son disque dur intégré, ses composants proches d'un PC et le lancement de Xbox Live.",
       "cpu": "Intel dérivé du Pentium III, 733 MHz",
@@ -473,7 +473,7 @@ window.LB_CONTENT = {
       "region": "Monde",
       "generation": "Septième génération — portable",
       "type": "Portable",
-      "image": "https://commons.wikimedia.org/wiki/Special:FilePath/PSP-1000.jpg?width=640",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/PSP-2000.jpg/250px-PSP-2000.jpg?utm_source=fr.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
       "imageSource": "https://commons.wikimedia.org/wiki/File:PSP-1000.jpg",
       "summary": "Une portable multimédia à grand écran 16:9, capable de jeux 3D ambitieux et utilisant le format optique UMD.",
       "cpu": "MIPS R4000, fréquence maximale de 333 MHz",
