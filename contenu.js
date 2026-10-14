@@ -42,6 +42,15 @@ window.LB_CONTENT = {
       "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAB3klEQVR4AWJwL/ABtF+GsA1CQRh+XkE3n3qFV3hVr/CKZKVppnDLeE1e6XyYN5s39Qqv8Ip0LJnsenlJc/x5cDBKaiZ+0fR69929+x/lrro/gNpklUqy8yBtdCklPB28+Cv3z706+Mcf4y0tQJLt5eJMqfH6ACi5CGBVfxsvUGqtw1EAm9e4qzh1BUXESSgVG08lum4X0kcugCi6u3+IeIFT7ldUhIs651Owi4BFti9LnhgA626ARcEBGvMYSkdkC6x13Dfmy+d3/j0dmxPg0jFLzkAFAOoYj6A9gSwCwBQTN29eCOP/HApAQjvWbNvtniAg2i9f7GHJ4PxhBxAA7Yhjxj1BOza5XwKAIABw2HEPe5DC9xHabwqAy44VA3ABFmC/aQCyHed/GEl2nB9AsOP8AJIdURbaLNVWh38WJhTs6IjXJYsfL0wo2RG7h9jpAHjroR3xir4xgGxHjMNp0YXVJ2pIABhux3aMc1IydEfiQLKjetqt8GacCoCBdZ8dVbIr2hPYrW4IINsRzxIBpwPgiOmH2ywi0U70/4ExwTUWNGgJ8ekoiYBgOh9D3zOgME5h4DvDcxY490dWhEXHQ4D96H4XCxPg2k6tszA+JWkJXSLLyrGgNL0u7P/b8S8zygji//c4vAAAAABJRU5ErkJggg==",
       "version": "",
       "size": ""
+    },
+    {
+      "title": "win9x",
+      "category": "système d'exploitation ",
+      "description": "pack de windows 95 a windows ME",
+      "fileUrl": "https://mega.nz/file/SsRljR6Y#rq9cMk7hDcUrj-zKoBrononIecQLTxNzD0icREE44NM",
+      "image": "assets/1791996292457-telecharge.jpg",
+      "version": "2.00",
+      "size": "830mo"
     }
   ],
   "gallery": [
