@@ -19,10 +19,10 @@ window.LB_CONTENT = {
     {
       "title": "retrobat",
       "category": "Émulation",
-      "description": "émulateur retrobat Windows mac et linux que j'utilise personnellement et qui et très bien",
+      "description": "émulateur retrobat Windows que j'utilise personnellement et qui et très bien",
       "fileUrl": "https://github.com/RetroBat-Official/retrobat/releases",
       "image": "https://www.retrobat.org/wp-content/uploads/2026/03/image-768x431.webp",
-      "version": "V8.2",
+      
       "size": "8go"
     },
     {
